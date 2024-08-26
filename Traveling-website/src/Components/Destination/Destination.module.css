@@ -1,0 +1,78 @@
+.destinationCards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 30px;
+}
+
+.destinationCards .destinationCard{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, .2);
+    transition: .6s;
+    border-radius: 12px;
+}
+
+.destinationCards .destinationCard:hover{
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, .5);
+}
+
+.destinationCards .destinationCard img{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.destinationCards .destinationCard .destinationDetails{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.destinationCards .destinationCard .destinationDetails h3{
+    font-size: 25px;
+    color: #fff;
+}
+
+.destinationCards .destinationCard .destinationDetails .btns{
+    display: flex;
+    align-self: flex-start;
+    gap: 15px;
+}
+
+.destinationCards .destinationCard .destinationDetails .btns a{
+    color: #fff;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 30px;
+    border: 0.5px solid rgba(255, 255, 255, .5);
+    padding: 6px 10px;
+}
+
+@media (max-width:1600px) {
+    
+    .destinationCards .destinationCard .destinationDetails .btns a{
+        padding: 6px 8px;
+        font-size: 15px;
+    } 
+    .destinationCards .destinationCard .destinationDetails .btns h3{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:1100px){
+        .destinationCards{
+            grid-template-columns: repeat(2,1fr);
+        }
+}
+
+@media screen and (max-width:768px){
+    .destinationCards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
